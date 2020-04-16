@@ -16,7 +16,7 @@
 }
 
 body {
-  background-color: #a4a4a4;
+  background-color: #eeeeee;
   font-family: 'Roboto', sans-serif;
 }
 a {
@@ -109,7 +109,7 @@ header {
   padding-top: 10rem;
 }
 .grid-container > .grid-items:nth-child(1),
-.grid-container > .grid-items:nth-child(3) {
+.grid-container > .grid-items:nth-child(4) {
   background-color: var(--dark-secondary);
 }
 .profile-pic-container {
@@ -139,4 +139,35 @@ header {
 .profile-info {
   display: flex;
   align-items: center;
+}
+
+.latest-post-grid {
+  display: grid;
+  grid-template: repeat(3, 2fr) / repeat(3, 1fr);
+  grid-gap: 2rem;
+  overflow-x: hidden;
+}
+.post-container {
+  height: 80vh;
+  padding: 4rem 2rem 0 3rem;
+  transition: 0.2s ease-in-out;
+}
+
+.post-container:hover {
+  transform: scale(1.1, 1.1);
+  box-shadow: 3px 2px 3px darkgray, -3px -2px 3px darkgray;
+  z-index: 1000;
+}
+
+.latest-post-grid > .post-container:nth-child(4),
+.latest-post-grid > .post-container:nth-child(9) {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+.latest-post-grid > .post-container:nth-child(4):hover,
+.latest-post-grid > .post-container:nth-child(9):hover {
+  transform: scale(1, 1);
+  box-shadow: none;
+  z-index: 1000;
 }
